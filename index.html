@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <h1>Página Inicial</h1>
+    <button onclick="window.location.href='p1.html'">Ir para Página</button>
+
+    <div class="container">
+        <label for="palavra">Palavra a ser enviada</label>
+        <input type="text" id="palavra1" placeholder="insira time 1">
+        <input type="text" id="palavra2" placeholder="insira time 2">
+        <input type="button" value="enviar nomes de time 1 " onclick="enviar('p1.html')">
+        
+    </div>
+    <form id="form" method="GET" style="display:none;">
+        <input type="hidden" name="palavra" id="inputPalavra">
+    </form>
+    <script src="./index.js"></script>
+
+
+
+</body>
+</html>
