@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placar de Vôlei</title>
+    <link rel="stylesheet" href="volei.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Placar de Vôlei</h1>
+        
+        <!-- Seção de nomes das equipes -->
+        <div class="nomes-times">
+            <label for="nomeA">Nome da Equipe A:</label>
+            <input type="text" id="nomeA" placeholder="Digite o nome da Equipe A" />
+            <br>
+            <label for="nomeB">Nome da Equipe B:</label>
+            <input type="text" id="nomeB" placeholder="Digite o nome da Equipe B" />
+        </div>
+
+        <div class="placar">
+            <!-- Placar da Equipe A -->
+            <div class="time" id="timeA">
+                <h2 id="timeAName">Equipe A</h2>
+                <div class="score" id="scoreA">0</div>
+                <div class="buttons">
+                    <button class="btn" id="btnAplus">+1 Ponto</button>
+                    <button class="btn" id="btnAminus">-1 Ponto</button>
+                </div>
+                <div class="set-buttons">
+                    <button class="btn" id="btnAsetplus">+1 Set</button>
+                    <button class="btn" id="btnAsetminus">-1 Set</button>
+                    <div class="set" id="setA">Set: 0</div>
+                </div>
+            </div>
+
+            <!-- Placar da Equipe B -->
+            <div class="time" id="timeB">
+                <h2 id="timeBName">Equipe B</h2>
+                <div class="score" id="scoreB">0</div>
+                <div class="buttons">
+                    <button class="btn" id="btnBplus">+1 Ponto</button>
+                    <button class="btn" id="btnBminus">-1 Ponto</button>
+                </div>
+                <div class="set-buttons">
+                    <button class="btn" id="btnBsetplus">+1 Set</button>
+                    <button class="btn" id="btnBsetminus">-1 Set</button>
+                    <div class="set" id="setB">Set: 0</div>
+                </div>
+            </div>
+        </div>
+
+        <button class="btn" id="resetBtn">Resetar Placar</button>
+
+        <!-- Histórico de Pontos -->
+        <div class="historico">
+            <h3>Histórico de Pontos</h3>
+            <div id="historico"></div>
+        </div>
+    </div>
+    
+    <script src="volei.js"></script>
+</body>
+</html>
