@@ -1,0 +1,58 @@
+<style>
+        /* Resetando margens e padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Estilo geral para o corpo da página */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Ocupa toda a altura da janela */
+            text-align: center;
+            background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+            background-size: 400% 400%;
+            animation: gradient 10s ease infinite;
+        }
+
+        /* Animação para o fundo de arco-íris */
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Estilo para o título h1 */
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: rgb(0, 0, 0); /* Cor do texto */
+        }
+
+        /* Estilo para o botão */
+        button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            background-color: white;
+            color: black;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #ddd;
