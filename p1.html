@@ -1,57 +1,128 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Placar de Vôlei</title>
-    <link rel="stylesheet" href="volei.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loja de Produtos</title>
+  <link rel="stylesheet" href="p1.css">  <!-- Link para o CSS -->
 </head>
 <body>
-    <div class="container">
-        <h1>Placar de Vôlei</h1>
-        
 
-        <div class="placar">
-            <!-- Placar da Equipe A -->
-            <div class="time" id="timeA">
-                <h2 id="timeAName">Equipe A</h2>
-                <div class="score" id="scoreA">0</div>
-                <div class="buttons">
-                    <button class="btn" id="btnAplus">+1 Ponto</button>
-                    <button class="btn" id="btnAminus">-1 Ponto</button>
-                </div>
-                <div class="set-buttons">
-                    <button class="btn" id="btnAsetplus">+1 Set</button>
-                    <button class="btn" id="btnAsetminus">-1 Set</button>
-                    <div class="set" id="setA">Set: 0</div>
-                </div>
-            </div>
+  <h1>Loja de Produtos</h1>
 
-            <!-- Placar da Equipe B -->
-            <div class="time" id="timeB">
-                <h2 id="timeBName">Equipe B</h2>
-                <div class="score" id="scoreB">0</div>
-                <div class="buttons">
-                    <button class="btn" id="btnBplus">+1 Ponto</button>
-                    <button class="btn" id="btnBminus">-1 Ponto</button>
-                </div>
-                <div class="set-buttons">
-                    <button class="btn" id="btnBsetplus">+1 Set</button>
-                    <button class="btn" id="btnBsetminus">-1 Set</button>
-                    <div class="set" id="setB">Set: 0</div>
-                </div>
-            </div>
+  <nav>
+    <button onclick="mostrar('home')">Home</button>
+    <button onclick="mostrar('vinil')">Vinil</button>
+    <button onclick="mostrar('camisas')">Camisas</button>
+    <button onclick="mostrar('eps')">EPS</button>
+  </nav>
+
+  <!-- Seções -->
+  <div id="home" class="pagina ativa">
+    <h2>Bem-vindo!</h2>
+    <p>Escolha uma categoria acima para navegar.</p>
+  </div>
+
+  <div id="vinil" class="pagina">
+    <h2>Vinil</h2>
+    <section>
+      <!-- Produto 1 -->
+      <div class="produto">
+        <img src="https://preview.redd.it/the-rust-in-peace-album-cover-is-so-great-v0-9fls69h6v6od1.jpeg?width=640&crop=smart&auto=webp&s=fb8a2eff6281801eebc3f03aa8848fe2333f701d" alt="Vinil 1">
+        <div class="texto">
+          <h3>Vinil 1</h3>
+          <p>R$ 50,00</p>
         </div>
-
-        <button class="btn" id="resetBtn">Resetar Placar</button>
-
-        <!-- Histórico de Pontos -->
-        <div class="historico">
-            <h3>Histórico de Pontos</h3>
-            <div id="historico"></div>
+        <div class="quantidade-container">
+          <button class="botao-adicionar" onclick="alterarQuantidade('vinil1', -1)">-</button>
+          <span id="vinil1" class="quantidade">0</span>
+          <button class="botao-adicionar" onclick="alterarQuantidade('vinil1', 1)">+</button>
         </div>
-    </div>
-    
-    <script src="volei.js"></script>
+      </div>
+
+      <!-- Produto 2 -->
+      <div class="produto">
+        <img src="link-da-imagem-vinil2.jpg" alt="Vinil 2">
+        <div class="texto">
+          <h3>Vinil 2</h3>
+          <p>R$ 60,00</p>
+        </div>
+        <div class="quantidade-container">
+          <button class="botao-adicionar" onclick="alterarQuantidade('vinil2', -1)">-</button>
+          <span id="vinil2" class="quantidade">0</span>
+          <button class="botao-adicionar" onclick="alterarQuantidade('vinil2', 1)">+</button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div id="camisas" class="pagina">
+    <h2>Camisas</h2>
+    <section>
+      <!-- Produto 1 -->
+      <div class="produto">
+        <img src="link-da-imagem-camisa1.jpg" alt="Camisa 1">
+        <div class="texto">
+          <h3>Camisa 1</h3>
+          <p>R$ 30,00</p>
+        </div>
+        <div class="quantidade-container">
+          <button class="botao-adicionar" onclick="alterarQuantidade('camisa1', -1)">-</button>
+          <span id="camisa1" class="quantidade">0</span>
+          <button class="botao-adicionar" onclick="alterarQuantidade('camisa1', 1)">+</button>
+        </div>
+      </div>
+
+      <!-- Produto 2 -->
+      <div class="produto">
+        <img src="link-da-imagem-camisa2.jpg" alt="Camisa 2">
+        <div class="texto">
+          <h3>Camisa 2</h3>
+          <p>R$ 40,00</p>
+        </div>
+        <div class="quantidade-container">
+          <button class="botao-adicionar" onclick="alterarQuantidade('camisa2', -1)">-</button>
+          <span id="camisa2" class="quantidade">0</span>
+          <button class="botao-adicionar" onclick="alterarQuantidade('camisa2', 1)">+</button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div id="eps" class="pagina">
+    <h2>EPS</h2>
+    <section>
+      <!-- Produto 1 -->
+      <div class="produto">
+        <img src="link-da-imagem-eps1.jpg" alt="EPS 1">
+        <div class="texto">
+          <h3>EPS 1</h3>
+          <p>R$ 80,00</p>
+        </div>
+        <div class="quantidade-container">
+          <button class="botao-adicionar" onclick="alterarQuantidade('eps1', -1)">-</button>
+          <span id="eps1" class="quantidade">0</span>
+          <button class="botao-adicionar" onclick="alterarQuantidade('eps1', 1)">+</button>
+        </div>
+      </div>
+
+      <!-- Produto 2 -->
+      <div class="produto">
+        <img src="link-da-imagem-eps2.jpg" alt="EPS 2">
+        <div class="texto">
+          <h3>EPS 2</h3>
+          <p>R$ 90,00</p>
+        </div>
+        <div class="quantidade-container">
+          <button class="botao-adicionar" onclick="alterarQuantidade('eps2', -1)">-</button>
+          <span id="eps2" class="quantidade">0</span>
+          <button class="botao-adicionar" onclick="alterarQuantidade('eps2', 1)">+</button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="p1.js"></script>  <!-- Link para o JS -->
 </body>
 </html>
+
