@@ -1,0 +1,14 @@
+body {
+    display: flex;
+    justify-content: center; /* Alinha horizontalmente */
+    align-items: center; /* Alinha verticalmente */
+    height: 100vh; /* Ocupa toda a altura da janela */
+    margin: 0; /* Remove a margem padrão do body */
+}
+
+#finalizar {
+    background-color: purple;
+    color: yellow;
+    padding: 20px;
+    font-size: 18px;
+}
