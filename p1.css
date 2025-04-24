@@ -92,3 +92,26 @@ section {
     font-size: 20px;
 }
   
+.botao-fixo {
+    position: fixed;
+    bottom: 20px; /* distância do fundo da tela */
+    right: 20px;  /* distância da borda direita da tela */
+    padding: 20px 50px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.botao-fixo:hover {
+    background-color: #0056b3;
+}
+  
+.quantidade {
+    margin: 0 10px;
+    font-size: 20px;
+}
+  
