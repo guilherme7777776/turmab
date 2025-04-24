@@ -9,7 +9,7 @@
 <body>
 
   <h1>Loja de Produtos</h1>
-
+  <button class="botao-fixo" onclick="window.location.href='carrinho.html'">carrinho</button>
   <nav>
     <button onclick="mostrar('home')">Home</button>
     <button onclick="mostrar('vinil')">Vinil</button>
@@ -23,14 +23,14 @@
     <p>Escolha uma categoria acima para navegar.</p>
   </div>
 
-  <div id="vinil" class="pagina">
+  <div style="height:2000px "id="vinil" class="pagina">
     <h2>Vinil</h2>
     <section>
       <!-- Produto 1 -->
       <div class="produto">
         <img src="https://preview.redd.it/the-rust-in-peace-album-cover-is-so-great-v0-9fls69h6v6od1.jpeg?width=640&crop=smart&auto=webp&s=fb8a2eff6281801eebc3f03aa8848fe2333f701d" alt="Vinil 1">
         <div class="texto">
-          <h3>Vinil 1</h3>
+          <h3>rust in peace- Megadeth</h3>
           <p>R$ 50,00</p>
         </div>
         <div class="quantidade-container">
@@ -42,15 +42,71 @@
 
       <!-- Produto 2 -->
       <div class="produto">
-        <img src="link-da-imagem-vinil2.jpg" alt="Vinil 2">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOMJm17Ni6qy2JDilmax_4G2vavqV6zXhG8g&s" alt="Vinil 2">
         <div class="texto">
-          <h3>Vinil 2</h3>
+          <h3>Paula Fernandes- Passaro of fire</h3>
           <p>R$ 60,00</p>
         </div>
         <div class="quantidade-container">
           <button class="botao-adicionar" onclick="alterarQuantidade('vinil2', -1)">-</button>
           <span id="vinil2" class="quantidade">0</span>
           <button class="botao-adicionar" onclick="alterarQuantidade('vinil2', 1)">+</button>
+        </div>
+      </div>
+
+      <!-- Produto 3 -->
+      <div class="produto">
+        <img src="https://upload.wikimedia.org/wikipedia/pt/4/4f/Weezer_-_Blue_Album.jpg" alt="Vinil 3">
+        <div class="texto">
+          <h3>Weezer- Weezer</h3>
+          <p>R$ 60,00</p>
+        </div>
+        <div class="quantidade-container">
+          <button class="botao-adicionar" onclick="alterarQuantidade('vinil3', -1)">-</button>
+          <span id="vinil3" class="quantidade">0</span>
+          <button class="botao-adicionar" onclick="alterarQuantidade('vinil3', 1)">+</button>
+        </div>
+      </div>
+
+      <!-- Produto 4 -->
+      <div class="produto">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXtosl6dg0FfwKuLy50MKLKcNOGkWpCuICrg&s" alt="Vinil 4">
+        <div class="texto">
+          <h3>Vida- Padre Fabio de melo</h3>
+          <p>R$ 60,00</p>
+        </div>
+        <div class="quantidade-container">
+          <button class="botao-adicionar" onclick="alterarQuantidade('vinil4', -1)">-</button>
+          <span id="vinilr" class="quantidade">0</span>
+          <button class="botao-adicionar" onclick="alterarQuantidade('vinil4', 1)">+</button>
+        </div>
+      </div>
+
+      <!-- Produto 5 -->
+      <div class="produto">
+        <img src="https://m.media-amazon.com/images/I/71QVLO-+6wL._UF1000,1000_QL80_.jpg" alt="Vinil 5">
+        <div class="texto">
+          <h3>Black Clouds & Silver Linings- Dream theater</h3>
+          <p>R$ 60,00</p>
+        </div>
+        <div class="quantidade-container">
+          <button class="botao-adicionar" onclick="alterarQuantidade('vinil5', -1)">-</button>
+          <span id="vinil5" class="quantidade">0</span>
+          <button class="botao-adicionar" onclick="alterarQuantidade('vinil5', 1)">+</button>
+        </div>
+      </div>
+
+      <!-- Produto 6 -->
+      <div class="produto">
+        <img src="https://upload.wikimedia.org/wikipedia/pt/0/05/TempleOfShadowsAngra.jpg" alt="Vinil 6">
+        <div class="texto">
+          <h3>Temple of shadows- ANGRA</h3>
+          <p>R$ 60,00</p>
+        </div>
+        <div class="quantidade-container">
+          <button class="botao-adicionar" onclick="alterarQuantidade('vinil6', -1)">-</button>
+          <span id="vinil6" class="quantidade">0</span>
+          <button class="botao-adicionar" onclick="alterarQuantidade('vinil6', 1)">+</button>
         </div>
       </div>
     </section>
@@ -61,9 +117,9 @@
     <section>
       <!-- Produto 1 -->
       <div class="produto">
-        <img src="link-da-imagem-camisa1.jpg" alt="Camisa 1">
+        <img src="https://m.media-amazon.com/images/I/61SosF6VGHS._AC_SY350_QL65_.jpg" alt="Camisa 1">
         <div class="texto">
-          <h3>Camisa 1</h3>
+          <h3>Camisa da banda Xavlegbmaofffassssitimiwoamndutroabcwapwaeiippohfffx</h3>
           <p>R$ 30,00</p>
         </div>
         <div class="quantidade-container">
@@ -75,15 +131,29 @@
 
       <!-- Produto 2 -->
       <div class="produto">
-        <img src="link-da-imagem-camisa2.jpg" alt="Camisa 2">
+        <img src="https://mockup-api.teespring.com/v3/image/R2aP02mOvfrFBn0QMj4vANHz11w/800/800.jpg" alt="Camisa 2">
         <div class="texto">
-          <h3>Camisa 2</h3>
+          <h3>Camisa Megurdef- Piss sells</h3>
           <p>R$ 40,00</p>
         </div>
         <div class="quantidade-container">
           <button class="botao-adicionar" onclick="alterarQuantidade('camisa2', -1)">-</button>
           <span id="camisa2" class="quantidade">0</span>
           <button class="botao-adicionar" onclick="alterarQuantidade('camisa2', 1)">+</button>
+        </div>
+      </div>
+
+      <!-- Produto 3 -->
+      <div class="produto">
+        <img src="https://acdn-us.mitiendanube.com/stores/002/152/760/products/camisa-santos-2023-oficial-umbro-branca-preto1-6c52899fb15401485a16841947458043-1024-1024.jpeg" alt="Camisa 3">
+        <div class="texto">
+          <h3>Camisa do Santos</h3>
+          <p>R$ 40,00</p>
+        </div>
+        <div class="quantidade-container">
+          <button class="botao-adicionar" onclick="alterarQuantidade('camisa3', -1)">-</button>
+          <span id="camisa3" class="quantidade">0</span>
+          <button class="botao-adicionar" onclick="alterarQuantidade('camisa3', 1)">+</button>
         </div>
       </div>
     </section>
@@ -94,9 +164,9 @@
     <section>
       <!-- Produto 1 -->
       <div class="produto">
-        <img src="link-da-imagem-eps1.jpg" alt="EPS 1">
+        <img src="https://upload.wikimedia.org/wikipedia/en/d/d1/NirvanaBlewEP.jpg" alt="EPS 1">
         <div class="texto">
-          <h3>EPS 1</h3>
+          <h3>Blew- Nirvana</h3>
           <p>R$ 80,00</p>
         </div>
         <div class="quantidade-container">
@@ -108,9 +178,9 @@
 
       <!-- Produto 2 -->
       <div class="produto">
-        <img src="link-da-imagem-eps2.jpg" alt="EPS 2">
+        <img src="https://upload.wikimedia.org/wikipedia/en/a/af/Ghost_-_Seven_Inches_of_Satanic_Panic.jpg" alt="EPS 2">
         <div class="texto">
-          <h3>EPS 2</h3>
+          <h3>Seven Inches of Satanic Panic- Ghost</h3>
           <p>R$ 90,00</p>
         </div>
         <div class="quantidade-container">
@@ -125,4 +195,6 @@
   <script src="p1.js"></script>  <!-- Link para o JS -->
 </body>
 </html>
+
+
 
