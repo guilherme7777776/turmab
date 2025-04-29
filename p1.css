@@ -94,9 +94,9 @@ section {
   
 .botao-fixo {
     position: fixed;
-    bottom: 20px; /* distância do fundo da tela */
-    right: 20px;  /* distância da borda direita da tela */
-    padding: 20px 50px;
+    bottom: 0px; /* distância do fundo da tela */
+    right: 0px;  /* distância da borda direita da tela */
+    padding: 20px 60px;
     background-color: #007bff;
     color: white;
     border: none;
@@ -114,4 +114,5 @@ section {
     margin: 0 10px;
     font-size: 20px;
 }
+  
   
