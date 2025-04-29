@@ -1,12 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="carrinho.css"> 
+  <meta charset="UTF-8">
+  <title>Carrinho de Compras</title>
+  <style>
+    table {
+      width: 80%;
+      margin: auto;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 12px;
+      border: 1px solid #ccc;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
-    <input type="button" id="finalizar" value="finalizar compra" onclick="finalizarcompra()">
+
+  <h1 style="text-align:center;">Carrinho de Compras</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Produto</th>
+        <th>Preço</th>
+        <th>Quantidade</th>
+        <th>Total</th>
+      </tr>
+    </thead>
+    <tbody id="tabela-carrinho"></tbody>
+    <tfoot>
+      <tr>
+        <td colspan="3"><strong>Total Geral:</strong></td>
+        <td id="total-geral"><strong>R$ 0,00</strong></td>
+      </tr>
+    </tfoot>
+  </table>
+
+  <script>
+    function carregarCarrinho() {
+      const carrinho = JSON.parse(localStorage.getItem("carrinho")) || {};
+      const tabela = document.getElementById("tabela-carrinho");
+      tabela.innerHTML = "";
+      let totalGeral = 0;
+
+      for (let id in carrinho) {
+        const item = carrinho[id];
+        const total = item.preco * item.quantidade;
+        totalGeral += total;
+
+        tabela.innerHTML += `
+          <tr>
+            <td>${item.nome}</td>
+            <td>R$ ${item.preco.toFixed(2)}</td>
+            <td>${item.quantidade}</td>
+            <td>R$ ${total.toFixed(2)}</td>
+          </tr>
+        `;
+      }
+
+      document.getElementById("total-geral").textContent = `R$ ${totalGeral.toFixed(2)}`;
+    }
+
+    carregarCarrinho();
+  </script>
 </body>
 </html>
