@@ -1,68 +1,52 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <title>Carrinho de Compras</title>
-  <style>
-    table {
-      width: 80%;
-      margin: auto;
-      border-collapse: collapse;
-    }
-    th, td {
-      padding: 12px;
-      border: 1px solid #ccc;
-      text-align: center;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de Compras</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .produto {
+            background-color: #fff;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .produto h3 {
+            margin: 0;
+            font-size: 20px;
+        }
+        .produto p {
+            margin: 5px 0;
+        }
+        #carrinho {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+    </style>
 </head>
 <body>
 
-  <h1 style="text-align:center;">Carrinho de Compras</h1>
-  <table>
-    <thead>
-      <tr>
-        <th>Produto</th>
-        <th>Preço</th>
-        <th>Quantidade</th>
-        <th>Total</th>
-      </tr>
-    </thead>
-    <tbody id="tabela-carrinho"></tbody>
-    <tfoot>
-      <tr>
-        <td colspan="3"><strong>Total Geral:</strong></td>
-        <td id="total-geral"><strong>R$ 0,00</strong></td>
-      </tr>
-    </tfoot>
-  </table>
+    <div class="container">
+        <h1>Seu Carrinho de Compras</h1>
+        <div id="carrinho"></div> <!-- Aqui serão exibidos os produtos -->
+    </div>
 
-  <script>
-    function carregarCarrinho() {
-      const carrinho = JSON.parse(localStorage.getItem("carrinho")) || {};
-      const tabela = document.getElementById("tabela-carrinho");
-      tabela.innerHTML = "";
-      let totalGeral = 0;
-
-      for (let id in carrinho) {
-        const item = carrinho[id];
-        const total = item.preco * item.quantidade;
-        totalGeral += total;
-
-        tabela.innerHTML += `
-          <tr>
-            <td>${item.nome}</td>
-            <td>R$ ${item.preco.toFixed(2)}</td>
-            <td>${item.quantidade}</td>
-            <td>R$ ${total.toFixed(2)}</td>
-          </tr>
-        `;
-      }
-
-      document.getElementById("total-geral").textContent = `R$ ${totalGeral.toFixed(2)}`;
-    }
-
-    carregarCarrinho();
-  </script>
+    <script src="carrinho.js"></script> <!-- Aponte para o arquivo JS correto -->
 </body>
 </html>
